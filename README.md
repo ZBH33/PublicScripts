@@ -1,10 +1,14 @@
 # PublicScripts
-I will have to say all scripts are ***vibe coded*** + copy/pasted from example scripts, then modified. ***Explained below - Please Read.***
+I will have to say all scripts are ***vibe coded*** + copy/pasted from example scripts, then modified. 
+'''***Explained below - Please Read.***'''
 Intended use case is for use with newly installed OS systems without Git.
 
 Public versions of custom Scripts. These scripts try to ommit personal, private or secrete infomation about myself/devices such as username(s) & ips. This means that some scripts just will not work or, will require you to manually edit & import required infomation.
 
-***I DO NOT KNOW WHAT I AM DOING**
+
+
+
+'''***I DO NOT KNOW WHAT I AM DOING**'''
 I'm not sure if it counts as ***vibe coding*** as I try ***not*** to just copy/paste but actually understand the code.
 I am learning via self study using Youtube for explanations/ideas & Public Git Repositorys for example scripts with the help of AI for explanations of and/or generation of snippets to get me started, error fixes, etc.
 
@@ -16,7 +20,7 @@ The most coding I have done before 2025 was like videogame settings, a mod for f
 if you do find anything wrong, know a better format, or you just see that I simply have the wrong idea about something ***PLEASE*** send us a message & explain, possibly pointing me in the direction of how to fix and/or help me understand what exactly has been done wrong. 
 Because well yeah, ***self study with AI*** isn't exactly the best.
 
-***Why now, & Why vibe code?***
+'''***Why now, & Why vibe code?***'''
 Due to Videogames being shit & Windows 11 forcing AI into legit everything (Even the file explorer man, like common dude give me my RAM back) I no longer play games, I no longer want to run Windows on my devices, I also have a hobbie hole to fill, as well as one old, & one new-ish gaming PCs collecting dust. 
 Thus the idea of a ***Homelab*** was born! One headless Server (Ubuntu Server 25) & one Workstation (Windows 11). 'Adding a laptop soon with a Linux distro & once comfy will kill the workstation & turn it into a Proxmox or something to mess around with via the lappy'
 
