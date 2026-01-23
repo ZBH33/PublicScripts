@@ -1,0 +1,16 @@
+# Repository List File
+# ====================
+# Format: <repository_url> [optional_custom_directory]
+# One repository per line
+# Lines starting with # are comments
+
+# Example repositories:
+https://github.com/torvalds/linux.git linux-kernel
+https://github.com/git/git.git git-source
+
+# SSH format (requires SSH key setup):
+# git@github.com:username/repository.git custom-folder
+
+# More examples:
+# https://github.com/docker/docker-ce.git
+# https://github.com/kubernetes/kubernetes.git k8s-source

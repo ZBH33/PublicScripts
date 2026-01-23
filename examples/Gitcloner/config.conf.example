@@ -1,0 +1,23 @@
+# Repository Setup Configuration
+# =============================
+
+# Custom clone directory (override OS-specific default)
+# CUSTOM_CLONE_DIR="${HOME}/my_repositories"
+
+# Git user configuration (optional)
+# GIT_USER_NAME="Your Name"
+# GIT_USER_EMAIL="your.email@example.com"
+
+# Verbosity level: 0=minimal, 1=normal, 2=detailed, 3=debug
+# VERBOSITY=1
+
+# Repository file (default: repositories.txt in script directory)
+# REPO_LIST_FILE="/path/to/your/repositories.txt"
+
+# Retry settings
+# MAX_RETRIES=2            # Number of retry attempts for failed clones
+# RETRY_DELAY=5           # Seconds to wait between retries
+
+# Log settings (use _CONFIG suffix to avoid variable conflicts)
+# MAX_LOG_SIZE_MB_CONFIG=20      # Maximum log file size in MB
+# MAX_LOG_FILES_CONFIG=50        # Maximum number of old log files to keep

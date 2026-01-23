@@ -18,16 +18,11 @@ set -o pipefail || {
 # ============================================================================
 # Gitcloner.sh
 # Purpose: clones git repositories listed in a file to the user's home directory
-# Usage: ./gitcloner.sh [repositories.txt]
+# Usage: ./gitcloner.sh 
 # Example: ./gitcloner.sh ./repositories.txt
-# You need to create a file with one git repository URL per line.
-# Example repositories.txt:
-# https://github.com/user/repo.git # line 1
-# https://some-other-repo-url.git # line 2
-# https://another-repo-url.git # line 3
 # ============================================================================
 # Author: ZBH33
-# Version: 1.
+# Version: 1.0
 # ============================================================================
 
 # ============================================
