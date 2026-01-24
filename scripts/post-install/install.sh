@@ -59,10 +59,6 @@ check_os() {
     exit 1
   fi
 
-  if [[ "$os_version" != "$REQUIRED_VERSION" ]]; then
-    print_error "This script requires Ubuntu $REQUIRED_VERSION (found $os_version)"
-    exit 1
-  fi
 }
 
 check_resources() {
