@@ -201,7 +201,7 @@ DEBIAN_FRONTEND=noninteractive apt-get install -y \
   logwatch \
   git \
   python3-pyinotify \
-  open-ssh
+  
 
 # --- Time Synchronization ---
 print_message "${YELLOW}" "Configuring time synchronization..."

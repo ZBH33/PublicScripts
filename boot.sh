@@ -23,21 +23,15 @@ echo -e "$banner"
 echo "=> For fresh Ubuntu Server installations only!"
 echo -e "\nBegin installation (or abort with ctrl+c)..."
 
-sudo apt-get update >/dev/null
-sudo apt-get install -y git >/dev/null
+sudo apt-get updatel
+sudo apt-get install -y git
 
-echo "Cloning Public Scripts..."
-rm -rf ~/.local/share/publicscripts
-git clone https://github.com/zbh33/publicscripts.git ~/.local/share/publicscripts >/dev/null
-
-PUBLICSCRIPTS_REF=${PUBLICSCRIPTS_REF:-"main"}
-
-if [[ $PUBLICSCRIPTS_REF != "main" ]]; then
-  cd ~/.local/share/publicscripts
-  git fetch origin "$PUBLICSCRIPTS_REF" && git checkout "$PUBLICSCRIPTS_REF"
-  cd - >/dev/null
-fi
+wget https://raw.githubusercontent.com/ZBH33/PublicScripts/refs/heads/main/scripts/GithubKey/CreateSSH-GithubKey.sh
+sudo chmod +x CreateSSH-GithubKey.sh
+sudo ./CreateSSH-GithubKey.sh
 
 echo "Installation starting..."
-source ~/.local/share/publicscripts/scripts/GithubKey/CreateSSH-GithubKey.sh
-source ~/.local/share/publicscripts/install.sh
+
+wget https://raw.githubusercontent.com/ZBH33/PublicScripts/refs/heads/main/install.sh
+sudo chmod +x install.sh
+sudo ./install.sh
