@@ -23,15 +23,12 @@ echo -e "$banner"
 echo "=> For fresh Ubuntu Server installations only!"
 echo -e "\nBegin installation (or abort with ctrl+c)..."
 
-sudo apt-get updatel
-sudo apt-get install -y git
+sudo apt-get update >/dev/null
+sudo apt-get install -y git >/dev/null
 
-wget https://raw.githubusercontent.com/ZBH33/PublicScripts/refs/heads/main/scripts/GithubKey/CreateSSH-GithubKey.sh
-sudo chmod +x CreateSSH-GithubKey.sh
-sudo ./CreateSSH-GithubKey.sh
+echo "Cloning Public Scripts..."
+rm -rf ~/.local/share/publicscripts
+git clone https://github.com/zbh33/publicscripts.git ~/.local/share/publicscripts >/dev/null
 
 echo "Installation starting..."
-
-wget https://raw.githubusercontent.com/ZBH33/PublicScripts/refs/heads/main/install.sh
-sudo chmod +x install.sh
-sudo ./install.sh
+source ~/.local/share/publicscripts/scripts/post-install/install.sh

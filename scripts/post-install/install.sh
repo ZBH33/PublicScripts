@@ -200,8 +200,7 @@ DEBIAN_FRONTEND=noninteractive apt-get install -y \
   rkhunter \
   logwatch \
   git \
-  python3-pyinotify \
-  
+  python3-pyinotify
 
 # --- Time Synchronization ---
 print_message "${YELLOW}" "Configuring time synchronization..."
