@@ -795,11 +795,11 @@ set_os_specific_dirs() {
     
     case "$os_type" in
         "linux")
-            CLONE_DIR=$(join_paths "${HOME}" "Projects")
+            CLONE_DIR=$(join_paths "${HOME}" "repositories")
             log_message "INFO" "Linux detected, using ${CLONE_DIR} for repositories"
             ;;
         "macos")
-            CLONE_DIR=$(join_paths "${HOME}" "Developer")
+            CLONE_DIR=$(join_paths "${HOME}" "repositories")
             log_message "INFO" "macOS detected, using ${CLONE_DIR} for repositories"
             ;;
         "windows")

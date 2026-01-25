@@ -2,33 +2,15 @@
 
 set -euo pipefail
 
-banner='▄▄▄▄▄▄              ▄▄      ▄▄▄▄         ██                        
-        ██▀▀▀▀█▄            ██      ▀▀██         ▀▀                        
-        ██    ██  ██    ██  ██▄███▄   ██       ████      ▄█████▄           
-        ██████▀   ██    ██  ██▀  ▀██  ██         ██     ██▀    ▀           
-        ██        ██    ██  ██    ██  ██         ██     ██                 
-        ██        ██▄▄▄███  ███▄▄██▀  ██▄▄▄   ▄▄▄██▄▄▄  ▀██▄▄▄▄█           
-        ▀▀         ▀▀▀▀ ▀▀  ▀▀ ▀▀▀     ▀▀▀▀   ▀▀▀▀▀▀▀▀    ▀▀▀▀▀            
-        ▄▄▄▄                         ██                                  
-      ▄█▀▀▀▀█                        ▀▀                 ██               
-      ██▄        ▄█████▄   ██▄████ ████     ██▄███▄   ███████   ▄▄█████▄ 
-      ▀████▄   ██▀    ▀   ██▀       ██     ██▀  ▀██    ██      ██▄▄▄▄ ▀ 
-          ▀██  ██         ██        ██     ██    ██    ██       ▀▀▀▀██▄ 
-      █▄▄▄▄▄█▀  ▀██▄▄▄▄█   ██     ▄▄▄██▄▄▄  ███▄▄██▀    ██▄▄▄   █▄▄▄▄▄██ 
-      ▀▀▀▀▀      ▀▀▀▀▀    ▀▀     ▀▀▀▀▀▀▀▀  ██ ▀▀▀       ▀▀▀▀    ▀▀▀▀▀▀  
-                                            ██
-'
-
-echo -e "$banner"
-echo "=> For fresh Ubuntu Server installations only!"
+echo "=> Ubuntu Server installations only!"
 echo -e "\nBegin installation (or abort with ctrl+c)..."
 
-sudo apt-get update >/dev/null
-sudo apt-get install -y git >/dev/null
+sudo apt-get update 
+sudo apt-get install -y git 
 
 echo "Cloning Public Scripts..."
 rm -rf ~/.local/share/publicscripts
-git clone https://github.com/zbh33/publicscripts.git ~/.local/share/publicscripts >/dev/null
+git clone https://github.com/zbh33/publicscripts.git ~/.local/share/publicscripts 
 
 echo "Installation starting..."
 source ~/.local/share/publicscripts/scripts/post-install/install.sh
