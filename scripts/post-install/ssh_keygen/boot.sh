@@ -2,8 +2,8 @@
 
 set -euo pipefail
 
-print_warning "=> Ubuntu Server installations only!"
-print_warning "Beginning Keygen for OpenSSH files!"
+echo "=> Ubuntu Server installations only!"
+echo "Beginning Keygen for OpenSSH files!"
 
-print_error "Installation starting..."
+echo "Installation starting..."
 source ~/.local/share/publicscripts/scripts/post-install/ssh_keygen/install.sh
