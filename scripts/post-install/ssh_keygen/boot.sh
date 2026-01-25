@@ -6,7 +6,7 @@ echo "=> Ubuntu Server installations only!"
 echo -e "\nBegin Keygen"
 
 echo "Cloning PublicScripts..."
-rm -rf ~/.local/share/scripts
+rm -rf ~/.local/share/scripts/PublicScripts
 git clone https://github.com/ZBH33/PublicScripts.git ~/.local/share/ubinkaze >/dev/null
 
 echo "Installation starting..."

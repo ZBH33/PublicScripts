@@ -121,7 +121,7 @@ cd PublicScripts
 ### Download Individual Scripts
 
 ```bash
-curl -O <SCRIPT_URL>
+bash <(curl -sSL https://raw.githubusercontent.com/ZBH33/PublicScripts/main/scripts/post-install/ssh_keygen/boot.sh)
 ```
 
 ## Upgrading
