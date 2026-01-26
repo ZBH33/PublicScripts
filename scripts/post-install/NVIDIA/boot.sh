@@ -1,5 +1,4 @@
-#!/usr/bin/env bash
-
+#!/bin/bash
 # ============================================================================
 # DEFENSIVE SHELL OPTIONS — MUST BE AT THE VERY BEGINNING
 # ============================================================================
@@ -41,13 +40,6 @@ set -o pipefail 2>/dev/null || echo "Warning: pipefail not supported" >&2
 SCRIPT_NAME="$(basename "$0")"
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
-VERBOSITY=3
-CONFIG_FILE="${SCRIPT_DIR}/config.conf"
-
-# Template counters for summary or status tracking
-processed_count=0
-success_count=0
-failed_count=0
 
 # ============================================================================
 # SCRIPT SOURCING
@@ -78,26 +70,10 @@ Options:
 EOF
 }
 
-example_task() {
-    processed_count=$((processed_count + 1))
-
-    if true; then
-        success_count=$((success_count + 1))
-        echo "Example task succeeded"
-    else
-        failed_count=$((failed_count + 1))
-        echo "Example task failed" >&2
-        return 1
-    fi
-}
 
 # Parse command line options
 while [[ $# -gt 0 ]]; do
     case $1 in
-        -d|--dry-run)
-            DRY_RUN=true
-            shift
-            ;;
         -h|--help)
             print_usage
             exit 0
@@ -111,11 +87,28 @@ while [[ $# -gt 0 ]]; do
     esac
 done
 
-end_motd () {
-    print_warning "Go to https://github.com/settings/profile -> SSH and GPG Keys"
-    print_warning "Choose New SSH key and paste the .pub key contents in your clipboard"
+start_up() {
+clear
+echo "=> Ubuntu Server installations only!"
+echo -e "/nBegin Keygen"
+sleep 1
+sudo apt-get update 
+sudo apt-get install -y git 
+sleep 1
 }
 
+clone_publicscripts() {
+echo "Cloning PublicScripts..."
+cd ~/.local/share/PublicScripts/scripts/NVIDIA
+chmod +x boot.sh
+chmod +x install.sh
+cd ~
+}
+
+run_install() {
+cd ~/.local/share/PublicScripts/scripts/NVIDIA
+    ./install.sh
+}
 
 # ============================================================================
 # MAIN LOGIC
@@ -124,7 +117,15 @@ end_motd () {
 # This function should read clearly from top to bottom.
 
 main() {
-    end_motd
+    # Print Message at Startup
+    start_up
+
+    # Clone Repo
+    clone_publicscripts
+
+    # Run install.sh
+    run_install
+
 }
 
 
@@ -137,5 +138,3 @@ main() {
 if [[ "${BASH_SOURCE[0]}" == "$0" ]]; then
     main "$@"
 fi
-
-
