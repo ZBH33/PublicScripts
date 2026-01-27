@@ -82,7 +82,7 @@ Honestly it's more "***Professor AI***" then it is "***vibe coding***".
 
 ### Current Features
 
-- GitCloner
+-
 -
 -
 
